@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Dom document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div style="margin:100px 100px;">
+
+        <button id="myButton">Click Me</button>
+        <p id="myParagraph">Initial text.........!</p>
+    </div>
+
+    <script>
+        // JavaScript function to handle button click event
+        function handleClick() {
+            var paragraph = document.getElementById("myParagraph");
+            paragraph.textContent = "Button clicked!";
+        }
+
+        // Add event listener to the button
+        var button = document.getElementById("myButton");
+        button.addEventListener("click", handleClick);
+    </script>
+</body>
+</html>

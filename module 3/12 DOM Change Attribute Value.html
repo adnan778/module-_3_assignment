@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Image Source Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <img id="myImage" src="img/old-image.jpg" alt="Initial Image" style="width: 400px; height: auto;">
+  <br>
+  <button id="changeButton">DOM Change Attribute Value</button>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  var image = document.getElementById("myImage");
+  var button = document.getElementById("changeButton");
+
+  button.addEventListener("click", function() {
+    image.src = "img/new-image.jpeg";
+    image.alt = "New Image";
+  });
+});
+
+  </script>
+</body>
+</html>

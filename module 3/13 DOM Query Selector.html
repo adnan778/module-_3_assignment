@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Query Selecttor</title>
+  <style>
+    .highlight {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <p id="paragraph1" class="highlight">Paragraph 1</p>
+  <p id="paragraph2">Paragraph 2</p>
+  <p id="paragraph3" class="highlight">Paragraph 3</p>
+  <p id="paragraph4">Paragraph 4</p>
+
+  <script>document.addEventListener("DOMContentLoaded", function() {
+    var paragraphs = document.querySelectorAll(".highlight");
+  
+    for (var i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = "red";
+    }
+  });</script>
+</body>
+</html>

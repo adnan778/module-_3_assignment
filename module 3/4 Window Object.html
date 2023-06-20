@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+</head>
+<body>
+    
+
+    <script>
+
+function openWindow(url, width, height) {
+  const windowFeatures = `width=${width},height=${height}`;
+  window.open(url, '_blank', windowFeatures);
+}
+
+
+const url = 'https://www.facebook.com';
+const width = 600;
+const height = 500;
+openWindow(url, width, height);
+
+
+    </script>
+</body>
+</html>

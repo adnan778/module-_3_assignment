@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data opject</title>
+</head>
+<body>
+
+
+    <script>
+        function getDayOfWeek(dateString) {
+          const date = new Date(dateString);
+          const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          const dayOfWeek = daysOfWeek[date.getDay()];
+          return dayOfWeek;
+        }
+
+        const currentDate = new Date().toISOString().split("T")[0];
+        const dayOfWeek = getDayOfWeek(currentDate);
+        document.write("The day of the week for today is:", dayOfWeek);
+    </script>
+</body>
+</html>

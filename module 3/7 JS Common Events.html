@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> JS Common Events</title>
+  <script>
+    // Function to display coordinates of the click
+    function displayCoordinates(event) {
+      const x = event.clientX;
+      const y = event.clientY;
+      alert(`Clicked at coordinates (x, y): ${x}, ${y}`);
+    }
+    
+    // Function to display key code of the pressed key
+    function displayKeyCode(event) {
+      const keyCode = event.keyCode || event.which;
+      alert(`Pressed key code: ${keyCode}`);
+    }
+    
+    // Function to change image source on mouseover
+    function changeImageSource() {
+      const image = document.getElementById("myImage");
+      image.src = "img/new-image.jpeg";
+    }
+  </script>
+</head>
+<body>
+  <h1>Interactive Webpage</h1>
+  <p>Click anywhere on the page to display coordinates.</p>
+  <p>Press any key on the keyboard to display the key code.</p>
+  <img id="myImage" src="img/old-image.jpg" onmouseover="changeImageSource()" alt="Image" width="200" height="200">
+  
+  <script>
+    // Event listener for click event
+    document.addEventListener("click", displayCoordinates);
+    
+    // Event listener for key press event
+    document.addEventListener("keypress", displayKeyCode);
+  </script>
+</body>
+</html>
